@@ -1,0 +1,18 @@
+<body class="bg-dark">
+  <h1 class="text-center p-4 bg-primary text-white m-4">Articles</h1>
+  
+
+  <h2 class="display-4 text-center text-light m-4">
+    List of items used in this practice
+  </h2>
+
+  <ul class="list-group m-4">
+    <% @articles.each do |article| %>
+    <li class="list-group-item bg-light text-dark">
+      <a href="/articles/<%= article.id %>" class="text-decoration-none text-dark">
+        <%= article.title %>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+</body>

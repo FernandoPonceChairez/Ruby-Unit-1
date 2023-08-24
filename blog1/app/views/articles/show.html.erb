@@ -1,0 +1,19 @@
+<body class="bg-dark">
+  <h1 class="bg-primary text-center p-4 text-white m-4">
+    <%= @article.title %>
+  </h1>
+
+  <p class="font-italic text-center text-white m-4">
+    <%= @article.body %>
+  </p>
+
+  <div class="text-center">
+    <a href="<%= edit_article_path(@article) %>" class="btn btn-primary btn-sm m-2">
+      Edit
+    </a>
+
+    <a href="<%= article_path(@article) %>" data-turbo-method="delete" data-turbo-confirm="Are you sure to delete this record?" class="btn btn-primary btn-sm m-2">
+      Destroy
+    </a>
+  </div>
+</body>
